@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+          
+  <mapping> 
+    <class-a>org.gradle.Person</class-a>
+    <class-b>org.gradle.Person2</class-b>   
+    <field>
+      <a>name</a>
+      <b>firstName</b>
+    </field>
+    <field>
+      <a>surName</a>
+      <b>lastName</b>
+    </field>
+    <field>
+      <a>address</a>
+      <b>address.street</b>
+    </field>
+  </mapping>  
+
+</mappings> 
