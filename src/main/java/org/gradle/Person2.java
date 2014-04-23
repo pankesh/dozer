@@ -6,6 +6,7 @@ public class Person2 {
 	private String firstName;
 	private String lastName;
 	private Address address;
+	private String[] childNames;
 
 	public String getLastName() {
 		return lastName;
@@ -29,6 +30,14 @@ public class Person2 {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public String[] getChildNames() {
+		return childNames;
+	}
+
+	public void setChildNames(String[] childNames) {
+		this.childNames = childNames;
 	}
 
 }

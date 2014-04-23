@@ -9,13 +9,19 @@ import org.gradle.Person;
 import org.gradle.Person2;
 
 public class PersonMapper {
-	private Mapper mapper = DozerBeanMapperSingletonWrapper.getInstance();
+	
+	
+	private static Mapper mapper = DozerBeanMapperSingletonWrapper.getInstance();
 
-	public Person2 mapPerson(Person person) {
+	static {
 		ArrayList<String> mappingFileUrls = new ArrayList<String>();
 		mappingFileUrls.add("META-INF/DozerBeanMapping.xml");
 		
 		((DozerBeanMapper) mapper).setMappingFiles(mappingFileUrls);
+		
+	}
+	
+	public Person2 mapPerson(Person person) {
 
 		Person2 person2 = mapper.map(person, Person2.class);
 		return person2;
